@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Prosync</title>
+    <link rel="stylesheet" type="text/css" href="signin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -12,17 +12,17 @@
 <body>
     <div class="container">
         <h1>Sign In</h1>
-        <div class="login-box">
+        <div class="form-box">
             <form onsubmit="return false;">
-                    <p class="input-desc">Username</p>
+                    <label for="username">Username</label>
                     <input type="text" id="user" name="username">
-                    <p class="input-desc">Password</p>
+                    <label for="password">Password</label>
                     <input type="password" id="pass" name="password">
                     <button onclick="login()">Login</button>
                     <p id="message"></p>
             </form>
         </div>
-        <p class="redirect">New here? <a href="./register.html">Sign Up!</a></p>
+        <p class="redirect">New here? <a href="./signup.html">Sign Up!</a></p>
     </div>
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript">

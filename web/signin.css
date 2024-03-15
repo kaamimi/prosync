@@ -3,6 +3,7 @@
     --textcolor:#ffffff;
     --accentcolor:#1a616d;
     --warning: rgb(255, 71, 15);
+    --link: blue;
 }
 
 body {
@@ -28,6 +29,7 @@ h1 {
 label {
     display: block;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 input{
@@ -38,7 +40,7 @@ input{
 button {
     width: 90%;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     align-self: center;
     background-color: #007bff;
     border: none;
@@ -52,12 +54,17 @@ button:hover {
     background-color: #338be9;
 }
 
-.input-desc{
-    font-weight: 900;
+label{
+    font-weight: 500;
 }
 
 .redirect a{
     text-decoration: none;
+    color: var(--link);
+}
+
+.redirect a:visited{
+    color: var(--link);
 }
 
 .container{
@@ -69,7 +76,7 @@ button:hover {
     flex-direction: column;
 }
 
-.login-box {
+.form-box {
     display: flex;
     justify-content: center;
     flex-flow: column;
