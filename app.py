@@ -11,4 +11,4 @@ def login(username, password):
         return False
 
 # Start the app
-eel.start('login.html')
+eel.start('signin.html')
