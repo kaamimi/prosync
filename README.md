@@ -1,2 +1,2 @@
 # ProSync
-ProSync - Devshouse submission from Team Producto!
+ProSync - DevsHouse submission from Team Producto!
