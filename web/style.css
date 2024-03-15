@@ -1,25 +1,45 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+:root{
+    --bgcolor:#07191d;
+    --textcolor:#ffffff;
+    --accentcolor:#1a616d;
 }
 
-.container {
-    width: 400px;
-    margin: 100px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 300px;
+    height: 200px;   
+    background-color: var(--accentcolor);
+    color: var(--textcolor);
+    padding: 40px;
+    border-radius: 5%;
+}
+
+.info{
+    width: 100%;
 }
 
 h1 {
     text-align: center;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
 
 label {
@@ -27,20 +47,12 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
     border: none;
-    color: #fff;
+    color:var(--textcolor);
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
