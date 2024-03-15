@@ -2,6 +2,7 @@
     --bgcolor:#07191d;
     --textcolor:#ffffff;
     --accentcolor:#1a616d;
+    --warning: rgb(255, 71, 15);
 }
 
 body {
@@ -13,6 +14,52 @@ body {
     background-color: var(--bgcolor);
     color: var(--textcolor);
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input{
+    width: 92%;
+    padding: 10px;
+}
+
+button {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    align-self: center;
+    background-color: #007bff;
+    border: none;
+    color:var(--textcolor);
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #338be9;
+}
+
+.input-desc{
+    font-weight: 900;
+}
+
+.redirect a{
+    text-decoration: none;
+}
+
 .container{
     display: flex;
     width: 100vw;
@@ -31,39 +78,11 @@ body {
     background-color: var(--accentcolor);
     color: var(--textcolor);
     padding: 40px;
-    border-radius: 5%;
-}
-
-.info{
-    width: 100%;
-}
-
-h1 {
-    text-align: center;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color:var(--textcolor);
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+    border-radius: 3%;
 }
 
 #message {
     text-align: center;
     margin-top: 10px;
-    color: red;
+    color: var(--warning);
 }
