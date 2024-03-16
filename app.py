@@ -8,11 +8,6 @@ eel.init('web')
 
 
 @eel.expose
-def Leetcode():
-    return leetcode.Leetcode("kaamimi")
-
-
-@eel.expose
 def login(username, password):
     myconn = sqlite3.connect('prosync.db')
     cur = myconn.cursor()
@@ -43,7 +38,7 @@ def redirect_to_home():
     eel.show('home.html')
 
 @eel.expose
-def askgemini(question):
+def askgemini_form(question):
     return askgemini.processQuestion(question)
 
 @eel.expose
