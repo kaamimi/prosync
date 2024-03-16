@@ -1,0 +1,17 @@
+Welcome to the ultimate tool for competitive programmers Producto! Our application is designed to revolutionize your problem-solving journey by combining the flexibility of versatile organizational tools with specialized features tailored to your unique needs. Here's what you can expect from our platform:
+
+Streamlined Task Management:
+- Effortlessly organize your tasks, competitions, and practice sessions with intuitive task management features.
+
+Comprehensive Problem Tracking:
+- Keep track of all the problems you've solved, categorize them based on difficulty, topic, or platform, and monitor your progress over time.
+- Analyze your performance and identify areas for improvement with detailed statistics and analytics.
+
+Integration with Leetcode
+- Seamlessly integrate with the popular online coding platform LeetCode
+- Access problem sets directly from the application, submit solutions, and track your performance across different platforms.
+
+Empowering Competitive Programmers:
+- Empower yourself to excel in competitive programming competitions with our comprehensive suite of features.
+
+Welcome to a new era of competitive programming excellence. Get ready to unleash your full potential with our desktop application. Let's embark on this journey together and conquer the world of competitive programming!
