@@ -22,4 +22,4 @@ def submit():
 
 
 if __name__ == "__main__":
-    print(Leetcode("kaamimi"))
+    print(Leetcode("Sunset-06"))

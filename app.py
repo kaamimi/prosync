@@ -10,15 +10,19 @@ eel.init('web')
 def Leetcode():
     return leetcode.Leetcode("kaamimi")
 
+
 @eel.expose
 def login(username, password):
     myconn = sqlite3.connect('prosync.db')
     cur = myconn.cursor()
-    r = cur.execute("SELECT username, password FROM prosync WHERE username = ? AND password = ?", (username, password))
-    if r.fetchone():
+    r = cur.execute("SELECT username, password, leetcodeid FROM prosync WHERE username = ? AND password = ?", (username, password))
+    res = r.fetchone()
+    if res:
+        print(res[2])
         return True
     else:
         return False
+
 
 @eel.expose
 def signup(username, password, leetcodeid):
@@ -31,6 +35,7 @@ def signup(username, password, leetcodeid):
         cur.execute("INSERT INTO prosync (username, password, leetcodeid) VALUES (?, ?, ?)", (username, password, leetcodeid))
         myconn.commit()
         return True
+
 
 @eel.expose
 def redirect_to_home():
