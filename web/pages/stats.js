@@ -1,6 +1,7 @@
-function genanalysis(response){
-    var parent=document.getElementsByClassName("analyse");
-    var analysis=document.createElement("p");
-    analysis.textContent = response;
-    parent.appendChild(analysis);
+function processstats() {
+    eel.processstats()(displayResponse);
+}
+function displayResponse(response,leetid) {
+    document.getElementById("response").innerText = response;
+    document.getElementById("leetid").innerText = leetid;
 }

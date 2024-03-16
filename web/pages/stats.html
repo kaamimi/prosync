@@ -13,11 +13,12 @@
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="./home.html">Welcome</a></li>
+                <li><a href="../home.html">Welcome</a></li>
                 <li><a href="./tasks.html">Tasks</a></li>
                 <li><a href="./stats.html">Statistics</a></li>
                 <li><a href="./Leader.html">Leaderboard</a></li>
                 <li><a href="./ai.html">Ask Gemini</a></li>
+                <li><a href="./useful.html">Useful Links</a></li>
             </ul>
         </div>
         <div class="content">
@@ -28,20 +29,14 @@
             <h3>Hard:</h3>
             <h3>Acceptance Rate:</h3>
             <p>Keep Solving!</p>
-            <p id="response"></p>
-            <button onclick="processstats()">Analyse</button>
+            <div class="analyse">
+                <button onclick="processstats()">Analyse</button>
+                <p id="response"></p>
+            </div>
         </div>
     </div>
     
 </body>
 <script type="text/javascript" src="/eel.js"></script>
-<script>
-    function processstats() {
-        eel.processstats()(displayResponse);
-    }
-    function displayResponse(response,leetid) {
-        document.getElementById("response").innerText = response;
-        document.getElementById("leetid").innerText = leetid;
-    }
-</script>
+<script src="stats.js"></script>
 </html>

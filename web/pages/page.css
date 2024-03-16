@@ -123,8 +123,16 @@ button:hover{
 }
 
 .analyse button {
-    width: 10em;
+    width: 5em;
     height: 3em;
+}
+
+.friend a{
+    text-decoration: none;
+}
+.friend a:visited{
+    text-decoration: none;
+    color: inherit;
 }
 
 #adderinput{
