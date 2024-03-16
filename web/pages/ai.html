@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Armata&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="icon" href="./icon.png">
     <title>ProSync</title>
     <link rel="stylesheet" href="page.css">
 </head>
@@ -13,7 +14,7 @@
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="./home.html">Welcome</a></li>
+                <li><a href="../home.html">Welcome</a></li>
                 <li><a href="./tasks.html">Tasks</a></li>
                 <li><a href="./stats.html">Statistics</a></li>
                 <li><a href="./Leader.html">Leaderboard</a></li>
@@ -21,14 +22,15 @@
             </ul>
         </div>
         <div class="content">
-            <h1>Your Statistics</h1>
-            <h2>LeetCode User:</p>
-            <h3>Easy:</h3>
-            <h3>Medium:</h3>
-            <h3>Hard:</h3>
-            <p>Keep Solving!</p>
+            <h1>Ask Gemini</h1>
+            <p>Ask Gemini for AI Assistance</p>
+            <p>(Remember, coding questions only)</p>
+            <input type="text" id="aiinput">
+            <button onclick="genresponse()">Submit</button>
         </div>
     </div>
     
 </body>
+<script type="text/javascript" src="/eel.js"></script>
+<script src="ai.js"></script>
 </html>
