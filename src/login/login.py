@@ -9,9 +9,10 @@ def get_login():
     username = []
     hash = []
     for d in res:
-        username.append(d["username"])
+        username.append(d["name"])
         hash.append(d["hash"])
     return username, hash
+
 
 def check_login(username, password):
     user, hash = get_login()
@@ -19,6 +20,7 @@ def check_login(username, password):
         return True
     else:
         return False
+
     
 if __name__ == "__main__":
-    print(check_login("kaaamimi", "asdasf1231"))
+    print(check_login("kamalesh", "ANDYANNNAANDYANNA"))

@@ -7,9 +7,7 @@ signed_in = False
 
 @eel.expose
 def login(username, password):
-    # global signed_in
     if check_login(username, password):
-        # signed_in = True
         return True
     else:
         return False
