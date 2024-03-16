@@ -18,6 +18,5 @@ def redirect_to_home():
     eel.show('home.html')
 
 
-# Start the app
 if __name__ == "__main__":
     eel.start('signin.html', size=(700, 500))
