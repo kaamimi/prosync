@@ -1,29 +1,23 @@
 import requests
 import json
+import eel
 
 
-class LeetCode:
-    def __init__(self, user):
-        Easy = 0
-        Medium = 0
-        Hard = 0
-        Acceptance = None
-        SubmissionCalendar = None
+@eel.expose
+def Leetcode(user):
+    r = requests.get(f"https://leetcode-stats-api.herokuapp.com/{user}")
+    res = json.loads(r.text)
 
-        r = requests.get(f"https://leetcode-stats-api.herokuapp.com/{user}")
-        res = json.loads(r.text)
+    if res["status"] == "success" and res["message"] == "retrieved":
+        Easy = res["easySolved"]
+        Medium = res["mediumSolved"]
+        Hard = res["hardSolved"]
+        Acceptance = res["acceptanceRate"]
+        SubmissionCalendar = res["submissionCalendar"]
     
-        if res["status"] == "success" and res["message"] == "retrieved":
-            self.Easy = res["easySolved"]
-            self.Medium = res["mediumSolved"]
-            self.Hard = res["hardSolved"]
-            self.Acceptance = res["acceptanceRate"]
-            self.SubmissionCalendar = res["submissionCalendar"]
-
-    def submit(self):
-        # TODO: Submission to GenAI
-        pass
+    return Easy, Medium, Hard, Acceptance, SubmissionCalendar
 
 
-if __name__ == "__main__":
-    k = LeetCode("kaamimi")
+def submit(self):
+    # TODO: Submission to GenAI
+    pass

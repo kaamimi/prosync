@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to the SQLite database
-conn = sqlite3.connect('database.db')
+conn = sqlite3.connect('todo.db')
 cursor = conn.cursor()
 
 # Create the todo table if it doesn't exist
