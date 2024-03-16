@@ -15,3 +15,5 @@ Empowering Competitive Programmers:
 - Empower yourself to excel in competitive programming competitions with our comprehensive suite of features.
 
 Welcome to a newer, sleeker experience in competitive programming. Get ready to unleash your full potential with ProSync.
+
+can you give me a brief analysis of a user with the following leetcode stats: "easy:7 medium: 5 hard: 3 acceptance rate: 10%"
