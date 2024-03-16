@@ -14,6 +14,8 @@ A Progressive Web App to make competitive programming easier and motivate studen
 
 # What you need to run it
 
+Just run these commands in your terminal one by one
+
 ```python
 py -m venv .venv
 ```
