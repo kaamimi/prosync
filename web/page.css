@@ -1,5 +1,5 @@
 :root {
-    --bgcolor: #07191d;
+    --bgcolor: #000000;
     --textcolor: #ffffff;
     --accentcolor: #1a616d;
     --warning: rgb(255, 71, 15);
@@ -37,7 +37,7 @@ body {
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 70px;
 }
 
 .sidebar li {
