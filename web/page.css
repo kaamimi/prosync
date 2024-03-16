@@ -106,15 +106,27 @@ button{
     color: #828282;
 }
 
+button:hover{
+    background-color: var(--accentcolor);
+    color: var(--textcolor);
+}
+
 .task button{
     margin-top: 10px;
     margin-left: 5px;
 }
 
-button:hover{
-    background-color: var(--accentcolor);
-    color: var(--textcolor);
-} 
+#adderinput{
+    width:15em;
+    height: 2em;
+    margin-right: 10px;    
+}
+
+#adder{
+    margin-top: 50px;
+    height: 2.3em;
+    width: 70px;
+}
 
 ul {
     list-style-type: none;
@@ -130,7 +142,16 @@ table{
     width: 65em;
 }
 
+tr{
+    text-align: center;
+}
+
 th{
-    border: 2px solid white;
     color: var(--lighttext);
+    border: 2px solid white;
+}
+
+td{
+    height: 40px;
+    background-color: var(--accentcolor);
 }

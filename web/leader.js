@@ -1,5 +1,6 @@
-function adduser(pos,user,pts) {    
-    var newRow = document.createElement("tr");
+function adduser(pos,user,pts) {  
+    var table = document.getElementById("board");  
+    var row = document.createElement("tr");
     
     var position = document.createElement("td");
     position.textContent = pos;
@@ -8,7 +9,8 @@ function adduser(pos,user,pts) {
     var points = document.createElement("td");
     points.textContent = pts;
    
-    newRow.appendChild(position.textContent);
-    newRow.appendChild(username.textContent);
-    newRow.appendChild(points.textContent);
+    row.appendChild(position);
+    row.appendChild(username);
+    row.appendChild(points);
+    table.appendChild(row);
 }
