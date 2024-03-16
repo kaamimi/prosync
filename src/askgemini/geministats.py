@@ -1,10 +1,23 @@
 import google.generativeai as genai
-from leetcode import Leetcode
+import requests, json
 
 GOOGLE_API_KEY = "AIzaSyDh3GF-duFIKtzDPrsgHQijUIX03K0I8OQ"
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("gemini-pro")
+
+def Leetcode(user):
+    r = requests.get(f"https://leetcode-stats-api.herokuapp.com/{user}")
+    res = json.loads(r.text)
+
+    if res["status"] == "success" and res["message"] == "retrieved":
+        Easy = res["easySolved"]
+        Medium = res["mediumSolved"]
+        Hard = res["hardSolved"]
+        Acceptance = res["acceptanceRate"]
+        SubmissionCalendar = res["submissionCalendar"]
+    
+    return Easy, Medium, Hard, Acceptance, SubmissionCalendar
 
 
 def respond_to_question(question):

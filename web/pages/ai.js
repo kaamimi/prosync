@@ -11,7 +11,7 @@
 function genresponse() {
     var question = document.getElementById("aiinput").value;
     //document.getElementById("load").classList.add("loader");
-    eel.askgemini(question)(displayResponse);
+    eel.askgemini_form(question)(displayResponse);
 }
 
 function displayResponse(response) {

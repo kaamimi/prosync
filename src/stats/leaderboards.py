@@ -1,7 +1,22 @@
 import sqlite3 as sql
-from leetcode import Leetcode
+import requests, json
 
 con = sql.connect('prosync.db')
+
+
+def Leetcode(user):
+    r = requests.get(f"https://leetcode-stats-api.herokuapp.com/{user}")
+    res = json.loads(r.text)
+
+    if res["status"] == "success" and res["message"] == "retrieved":
+        Easy = res["easySolved"]
+        Medium = res["mediumSolved"]
+        Hard = res["hardSolved"]
+        Acceptance = res["acceptanceRate"]
+        SubmissionCalendar = res["submissionCalendar"]
+    
+    return Easy, Medium, Hard, Acceptance, SubmissionCalendar
+
 
 
 # Check stats of one user
