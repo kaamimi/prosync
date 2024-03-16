@@ -13,7 +13,7 @@ if not pathlib.Path('leaderboards.db').is_file():
     conn.close()
 
 
-def getfrom(leetuser):
+def checkifexists(leetuser):
     _, _, leetusr = get_login()
     if leetusr == leetuser:
         return True
@@ -21,7 +21,7 @@ def getfrom(leetuser):
 
 
 def get_leaderboards(leetuser):
-    if not getfrom(leetuser):
+    if not checkifexists(leetuser):
         return "User not found"
     conn = sqlite3.connect('leaderboards.db')
     c = conn.cursor()
