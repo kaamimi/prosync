@@ -9,4 +9,5 @@ def respond_to_question(question):
     response = model.generate_content(question)
     return response.text
 
+print(respond_to_question(""))
 # Prompt this to use user's LeetCode stats and give an analysis of your performance.
