@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .delete {
+      cursor: pointer;
+      color: red;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input type="text" id="task">
+  <button onclick="newtask()">Add</button>
+  <ul id="list">
+  </ul>
+  <script>
+    var n = 0;
+
+    function newtask() {
+      var taskInput = document.getElementById("task");
+      var taskText = taskInput.value.trim();
+      
+      if (taskText !== "") {
+        var List = document.getElementById("list");
+        var newTask = document.createElement("li");
+        newTask.innerHTML = `
+          <input type="checkbox" onclick="toggleTask(this)">
+          <span>${taskText}</span>
+          <span class="delete" onclick="deleteTask(this)">❌</span>
+        `;
+        List.appendChild(newTask);
+        n++; 
+        taskInput.value = "";
+      }
+    }
+
+    function deleteTask(element) {
+      var taskItem = element.parentElement;
+      taskItem.remove();
+      n--; 
+    }
+
+    function toggleTask(element) {
+      var values= element.nextElementSibling;
+      if (element.checked) {
+        values.style.textDecoration = "line-through";
+      } else {
+        values.style.textDecoration = "none";
+      }
+    }
+
+    function clearall(){
+      var List = document.getElementById("list");
+      List.innerHTML = ""; 
+      n = 0; 
+    }
+  </script>
+  <br>
+  <button id="delete-all" onclick="clearall()">Clear All</button>
+</body>
+</html>
