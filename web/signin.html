@@ -32,7 +32,7 @@
 
             eel.login(username, password)(function(result) {
                 if (result) {
-                    document.getElementById("message").innerHTML = "Login successful!";
+                    window.open("./home.html", "_parent");
                 } else {
                     document.getElementById("message").innerHTML = "Invalid username or password!";
                 }
