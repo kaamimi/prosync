@@ -14,4 +14,4 @@ Integration with Leetcode
 Empowering Competitive Programmers:
 - Empower yourself to excel in competitive programming competitions with our comprehensive suite of features.
 
-Welcome to a new era of competitive programming excellence. Get ready to unleash your full potential with our desktop application. Let's embark on this journey together and conquer the world of competitive programming!
+Welcome to a newer, sleeker experience in competitive programming. Get ready to unleash your full potential with ProSync.
