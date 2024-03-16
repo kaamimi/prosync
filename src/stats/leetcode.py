@@ -19,3 +19,6 @@ def Leetcode(user):
 def submit():
     # TODO: Submission to GenAI
     pass
+
+if __name__ == "__main__":
+    print(Leetcode("kaamimi"))
