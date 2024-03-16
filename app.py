@@ -6,6 +6,10 @@ eel.init('web')
 
 
 @eel.expose
+def Leetcode():
+    return leetcode.Leetcode("kaamimi")
+
+@eel.expose
 def login(username, password):
     if check_login(username, password):
         return True
@@ -20,3 +24,4 @@ def redirect_to_home():
 
 if __name__ == "__main__":
     eel.start('signin.html', size=(700, 500))
+    print(Leetcode())

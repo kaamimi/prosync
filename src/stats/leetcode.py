@@ -1,9 +1,7 @@
 import requests
 import json
-import eel
 
 
-@eel.expose
 def Leetcode(user):
     r = requests.get(f"https://leetcode-stats-api.herokuapp.com/{user}")
     res = json.loads(r.text)
@@ -18,6 +16,6 @@ def Leetcode(user):
     return Easy, Medium, Hard, Acceptance, SubmissionCalendar
 
 
-def submit(self):
+def submit():
     # TODO: Submission to GenAI
     pass
