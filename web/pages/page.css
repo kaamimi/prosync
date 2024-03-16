@@ -127,6 +127,14 @@ button:hover{
     height: 3em;
 }
 
+.friend a{
+    text-decoration: none;
+}
+.friend a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
 #adderinput{
     width:15em;
     height: 2em;
