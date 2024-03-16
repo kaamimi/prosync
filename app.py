@@ -1,7 +1,7 @@
 import eel
 from src.login.login import check_login
 from src.stats import leetcode
-from src.askgemini import askgenai
+from src.askgemini import askgemini, geministats
 import sqlite3
 
 eel.init('web')
@@ -44,9 +44,11 @@ def redirect_to_home():
 
 @eel.expose
 def askgemini(question):
-    return askgenai.processQuestion(question)
+    return askgemini.processQuestion(question)
 
+@eel.expose
+def geministats(easy, medium, hard, acceptance, submission):
+    return geministats.processstats(easy, medium, hard, acceptance, submission)
 
 if __name__ == "__main__":
-    eel.start('home.html', size=(800, 700))
-    print(Leetcode())
+    eel.start('signin.html', size=(800, 700))
