@@ -1,6 +1,7 @@
 import eel
 from src.login.login import check_login
 from src.stats import leetcode
+import sqlite3
 
 eel.init('web')
 
@@ -11,7 +12,10 @@ def Leetcode():
 
 @eel.expose
 def login(username, password):
-    if check_login(username, password):
+    myconn = sqlite3.connect('prosync.db')
+    cur = myconn.cursor()
+    r = cur.execute("SELECT * FROM prosync WHERE username = ? AND password = ?", (username, password))
+    if r.fetchone():
         return True
     else:
         return False
