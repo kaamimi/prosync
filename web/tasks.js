@@ -1,6 +1,13 @@
 var n = 0;
+const input = document.getElementsById("task");
+input.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        newtask();
+    }
+});
 
 function newtask() {
+  
   var taskInput = document.getElementById("task");
   var taskText = taskInput.value.trim();
   

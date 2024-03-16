@@ -9,13 +9,15 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin: 0;
     padding: 0;
     background-color: var(--bgcolor);
     color: var(--textcolor);
+    height: 100vh;
+    width: 100vw;
 }
 
 h1{
@@ -24,10 +26,10 @@ h1{
     font-family: "Sofia Sans Semi Condensed", sans-serif;
     font-weight: 300;
     margin-top: -20px;
+    margin-bottom: 40px;
 }
 
 .container {
-    height: 100vh;
     display: flex;
 }
 
@@ -68,6 +70,7 @@ h1{
 }
 
 .content{
+    margin-top: -4em;
     padding: 10em;
     margin-left: 150px;
 }
@@ -79,6 +82,12 @@ h1{
 .content input{
     margin-left: 50px;
 }
+
+.content h2{
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    font-weight: 300;
+
+} 
 
 .task{
     display: flex;
@@ -95,7 +104,6 @@ button{
     border-radius: 3%;
     background-color: var(--bgcolor);
     color: #828282;
-    border: 0;
 }
 
 .task button{
@@ -116,4 +124,13 @@ ul {
   
 li {
     margin-bottom: 10px;
+}
+
+table{
+    width: 65em;
+}
+
+th{
+    border: 2px solid white;
+    color: var(--lighttext);
 }
