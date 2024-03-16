@@ -1,0 +1,61 @@
+:root {
+    --bgcolor: #07191d;
+    --textcolor: #ffffff;
+    --accentcolor: #1a616d;
+    --warning: rgb(255, 71, 15);
+    --link: blue;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    min-width: 200px;
+    min-height: 94.5%;
+    background-color: var(--accentcolor);
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: var(--textcolor);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: var(--textcolor);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content{
+    padding: 10em;
+}
