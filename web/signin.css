@@ -1,9 +1,12 @@
-:root{
-    --bgcolor:#07191d;
-    --textcolor:#ffffff;
-    --accentcolor:#1a616d;
+:root {
+    --bgcolor: linear-gradient(to right, #232526, #414345);
+    --textcolor: #ffffff;
+    --lighttext: #9197ae;
+    --accentcolor: #9197ae;
+    --accent2: #3e502b;
+    --accentlight:  #1c3b4b;
     --warning: rgb(255, 71, 15);
-    --link: blue;
+    --link: rgb(78, 78, 255);
 }
 
 body {
@@ -12,7 +15,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background-color: var(--bgcolor);
+    background: var(--bgcolor);
     color: var(--textcolor);
 }
 

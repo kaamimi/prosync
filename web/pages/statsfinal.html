@@ -21,32 +21,27 @@
             </ul>
         </div>
         <div class="content">
-       
-     <script type="text/javascript" src="/eel.js"></script>
-    <script>
-        function processstats() {
-            
-            eel.processstats()(displayResponse);
-        }
-
-        // Function to display response
-        function displayResponse(response,leetid) {
-            document.getElementById("info").innerText = response;
-            document.getElementById("leetid").innerText = leetid;
-        }
-    </script>
             <h1>Your Statistics</h1>
             <h2>LeetCode User:<p id="leetid"> </p> </h2>
             <h3>Easy:</h3>
             <h3>Medium:</h3>
             <h3>Hard:</h3>
-            <h3>AcceptanceRate:</h3>
-            <h3>SubmissionCalender:</h3>
+            <h3>Acceptance Rate:</h3>
             <p>Keep Solving!</p>
             <p id="info"></p>
-            <button onclick="processstats()">Submit</button>
+            <button onclick="processstats()">Analyse</button>
         </div>
     </div>
     
 </body>
+<script type="text/javascript" src="/eel.js"></script>
+<script>
+    function processstats() {
+        eel.processstats()(displayResponse);
+    }
+    function displayResponse(response,leetid) {
+        document.getElementById("info").innerText = response;
+        document.getElementById("leetid").innerText = leetid;
+    }
+</script>
 </html>
