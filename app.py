@@ -1,4 +1,5 @@
 import eel
+from src.login.login import check_login
 
 eel.init('web')
 
@@ -6,9 +7,9 @@ signed_in = False
 
 @eel.expose
 def login(username, password):
-    global signed_in
-    if username == "user" and password == "password":
-        signed_in = True
+    # global signed_in
+    if check_login(username, password):
+        # signed_in = True
         return True
     else:
         return False
