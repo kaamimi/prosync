@@ -1,6 +1,7 @@
 import eel
 from src.login.login import check_login
 from src.stats import leetcode
+from src.askgemini import askgenai
 
 eel.init('web')
 
@@ -20,6 +21,10 @@ def login(username, password):
 @eel.expose
 def redirect_to_home():
     eel.show('home.html')
+
+@eel.expose
+def askgemini(question):
+    return askgenai.processQuestion(question)
 
 
 if __name__ == "__main__":

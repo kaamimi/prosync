@@ -1,8 +1,9 @@
 :root {
-    --bgcolor: #000000;
+    --bgcolor: linear-gradient(to right, #232526, #414345);
     --textcolor: #ffffff;
-    --lighttext: #828282;
-    --accentcolor: #142A36;
+    --lighttext: #9197ae;
+    --accentcolor: #9197ae;
+    --accent2: #3e502b;
     --accentlight:  #1c3b4b;
     --warning: rgb(255, 71, 15);
     --link: blue;
@@ -14,7 +15,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background-color: var(--bgcolor);
+    background: var(--bgcolor);
     color: var(--textcolor);
     height: 100vh;
     width: 100vw;
@@ -22,7 +23,7 @@ body {
 }
 
 h1{
-    color: var(--lighttext);
+    color: var(--accentcolor);
     font-size: 90px;
     font-family: "Sofia Sans Semi Condensed", sans-serif;
     font-weight: 300;
@@ -36,10 +37,13 @@ h1{
 
 .sidebar {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     min-width: 200px;
     min-height: 100%;
-    background-color: var(--accentcolor);
+    background-color: #151717;
     padding: 20px;
+    border-right: 5px solid var(--accentcolor);
 }
 
 .sidebar h2 {
@@ -51,6 +55,7 @@ h1{
     list-style: none;
     padding: 0;
     margin-top: 20px;
+    margin-bottom: auto;
 }
 
 .sidebar li {
@@ -73,6 +78,7 @@ h1{
     margin-top: -4em;
     padding: 10em;
     margin-left: 150px;
+    animation: appear 0.3s forwards;
 }
 
 .content p{
@@ -101,14 +107,13 @@ h1{
 button{
     width: 50px;
     height: 30px;
-    border-radius: 3%;
+    border-radius: 10%;
     border: 2px solid transparent;
     background-color: var(--bgcolor);
-    color: var(--lighttext);
+    color: var(--accentcolor);
 }
 
 button:hover{
-
     background-color: var(--accentcolor);
     color: var(--textcolor);
 }
@@ -116,6 +121,11 @@ button:hover{
 .task button{
     margin-top: 10px;
     margin-left: 5px;
+}
+
+.analyse button {
+    width: 10em;
+    height: 3em;
 }
 
 #adderinput{
@@ -149,11 +159,21 @@ tr{
 }
 
 th{
-    color: var(--lighttext);
+    color: var(--accentcolor);
     border: 2px solid white;
+    font-size: 20px;
 }
 
 td{
     height: 40px;
-    background-color: var(--accentcolor);
+    background-color: #6e7176;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }

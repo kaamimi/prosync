@@ -1,9 +1,12 @@
-function adduser(pos,user,pts) {  
+var pos=1;
+
+function adduser(user,pts) {  
     var table = document.getElementById("board");  
     var row = document.createElement("tr");
     
     var position = document.createElement("td");
     position.textContent = pos;
+    pos++;
     var username = document.createElement("td");
     username.textContent = user;
     var points = document.createElement("td");
