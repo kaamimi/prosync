@@ -14,12 +14,23 @@ def Leetcode():
 def login(username, password):
     myconn = sqlite3.connect('prosync.db')
     cur = myconn.cursor()
-    r = cur.execute("SELECT * FROM prosync WHERE username = ? AND password = ?", (username, password))
+    r = cur.execute("SELECT username, password FROM prosync WHERE username = ? AND password = ?", (username, password))
     if r.fetchone():
         return True
     else:
         return False
 
+@eel.expose
+def signup(username, password, leetcodeid):
+    myconn = sqlite3.connect('prosync.db')
+    cur = myconn.cursor()
+    r = cur.execute("SELECT username FROM prosync WHERE username = ?", (username,))
+    if r.fetchone():
+        return False
+    else:
+        cur.execute("INSERT INTO prosync (username, password, leetcodeid) VALUES (?, ?, ?)", (username, password, leetcodeid))
+        myconn.commit()
+        return True
 
 @eel.expose
 def redirect_to_home():

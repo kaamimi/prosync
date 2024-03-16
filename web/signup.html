@@ -38,12 +38,12 @@
                 return;
             }
 
-           
-            eel.signup(username, password,repassword,leetcodeid)(function(result) {
+            eel.signup(username, password, leetcodeid)(function(result) {
                 if (result) {
                     document.getElementById("message").innerHTML = "Sign Up successful!";
+                    eel.redirect_to_home();
                 } else {
-                    document.getElementById("message").innerHTML = "Sign up Error!";
+                    document.getElementById("message").innerHTML = "Profile already exists!";
                 }
             });
         }
