@@ -1,7 +1,9 @@
 :root {
     --bgcolor: #000000;
     --textcolor: #ffffff;
-    --accentcolor: #1a616d;
+    --lighttext: #828282;
+    --accentcolor: #142A36;
+    --accentlight:  #1c3b4b;
     --warning: rgb(255, 71, 15);
     --link: blue;
 }
@@ -16,14 +18,23 @@ body {
     color: var(--textcolor);
 }
 
+h1{
+    color: var(--lighttext);
+    font-size: 90px;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    font-weight: 300;
+    margin-top: -20px;
+}
+
 .container {
     height: 100vh;
     display: flex;
 }
 
 .sidebar {
+    position: fixed;
     min-width: 200px;
-    min-height: 94.5%;
+    min-height: 100%;
     background-color: var(--accentcolor);
     padding: 20px;
 }
@@ -53,9 +64,56 @@ body {
 }
 
 .sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--accentlight);
 }
 
 .content{
     padding: 10em;
+    margin-left: 150px;
+}
+
+.content p{
+    margin-left: 50px;
+}
+
+.content input{
+    margin-left: 50px;
+}
+
+.task{
+    display: flex;
+    flex-direction: row;
+}
+
+.task p{
+    margin-left: 20px;
+}
+
+button{
+    width: 50px;
+    height: 30px;
+    border-radius: 3%;
+    background-color: var(--bgcolor);
+    color: #828282;
+    border: 0;
+}
+
+.task button{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+button:hover{
+    background-color: var(--accentcolor);
+    color: var(--textcolor);
+} 
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+  
+li {
+    margin-bottom: 10px;
 }

@@ -2,7 +2,7 @@ import eel
 
 eel.init('web')
 
-signed_in = False
+signed_in = True
 
 @eel.expose
 def login(username, password):
@@ -23,6 +23,5 @@ def open_page():
     else:
         eel.start('signin.html')
 
-# Start the app
 if __name__ == "__main__":
     open_page()
