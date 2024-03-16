@@ -18,7 +18,7 @@ def login(username, password):
     r = cur.execute("SELECT username, password, leetcodeid FROM prosync WHERE username = ? AND password = ?", (username, password))
     res = r.fetchone()
     if res:
-        print(res[2])
+        cur.execute(f"INSERT INTO signed_in VALUES('{res[2]}')")
         return True
     else:
         return False

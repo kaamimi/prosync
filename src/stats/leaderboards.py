@@ -12,6 +12,12 @@ def check_stats(user):
     con.close()
     return r
 
+def logged_in():
+    cur = con.cursor()
+    cur.execute("SELECT * FROM signed_in")
+    r = cur.fetchall()
+    con.close()
+    return r
 
 if __name__ == "__main__":
-    print(check_stats("nilay"))
+    print(logged_in())
