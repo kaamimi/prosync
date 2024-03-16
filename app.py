@@ -48,5 +48,5 @@ def askgemini(question):
 
 
 if __name__ == "__main__":
-    eel.start('signin.html', size=(800, 700))
+    eel.start('home.html', size=(800, 700))
     print(Leetcode())

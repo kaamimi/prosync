@@ -28,20 +28,14 @@
             <h3>Hard:</h3>
             <h3>Acceptance Rate:</h3>
             <p>Keep Solving!</p>
-            <p id="response"></p>
-            <button onclick="processstats()">Analyse</button>
+            <div class="analyse">
+                <button onclick="processstats()">Analyse</button>
+                <p id="response"></p>
+            </div>
         </div>
     </div>
     
 </body>
 <script type="text/javascript" src="/eel.js"></script>
-<script>
-    function processstats() {
-        eel.processstats()(displayResponse);
-    }
-    function displayResponse(response,leetid) {
-        document.getElementById("response").innerText = response;
-        document.getElementById("leetid").innerText = leetid;
-    }
-</script>
+<script src="stats.js"></script>
 </html>
